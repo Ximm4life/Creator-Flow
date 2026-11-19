@@ -129,4 +129,41 @@ $("addPost").addEventListener("click", () => {
   $("post").value = "";
   $("postDate").value = "";
   savePosts();
-});
+});function generateHooks() {
+  const topic = document.getElementById("hookTopic").value.trim();
+  const result = document.getElementById("hookResult");
+
+  if (!topic) {
+    result.textContent = "Please enter a video topic first.";
+    return;
+  }
+
+  const hooks = [
+    `Nobody tells you this about ${topic}...`,
+    `Stop scrolling if you're interested in ${topic}!`,
+    `I wish I knew this before getting into ${topic}.`,
+    `Here are 5 things you need to know about ${topic}.`,
+    `Most people get ${topic} completely wrong.`,
+    `This might change the way you think about ${topic}.`,
+    `The biggest mistake beginners make with ${topic}.`,
+    `Can you believe this about ${topic}?`
+  ];
+
+  result.textContent = hooks.join("\n\n");
+}
+
+document.getElementById("generateHook")
+  .addEventListener("click", generateHooks);
+
+document.getElementById("copyHook")
+  .addEventListener("click", async () => {
+    const text = document.getElementById("hookResult").textContent;
+
+    try {
+      await navigator.clipboard.writeText(text);
+      document.getElementById("copyHook").textContent = "Copied!";
+    } catch {
+      document.getElementById("copyHook").textContent = "Copy unavailable";
+    }
+  });
+  renderPosts();
