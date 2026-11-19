@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0b1020;
+  color: #f5f6ff;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 25px 8%;
+  border-bottom: 1px solid #252c43;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+header h1 span {
+  color: #9b83ff;
+}
+
+header p, .hero p {
+  color: #aeb6d0;
+}
+
+main {
+  width: min(900px, 92%);
+  margin: 35px auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 35px 10px;
+}
+
+.hero h2 {
+  font-size: clamp(28px, 5vw, 42px);
+}
+
+.panel {
+  background: #151d33;
+  border: 1px solid #2b3654;
+  border-radius: 16px;
+  padding: 25px;
+  margin: 24px 0;
+}
+
+label {
+  display: block;
+  margin: 18px 0 8px;
+  color: #c8cde0;
+}
+
+input, select {
+  width: 100%;
+  padding: 13px;
+  background: #0d1427;
+  color: white;
+  border: 1px solid #394665;
+  border-radius: 8px;
+}
+
+button {
+  margin-top: 18px;
+  padding: 13px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #8065f5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #9b83ff;
+}
+
+.secondary {
+  background: #34415f;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 18px;
+  min-height: 100px;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  background: #0d1427;
+  border-radius: 10px;
+  color: #e4e7f5;
+}
+
+.post {
+  padding: 15px;
+  margin-top: 12px;
+  border-radius: 9px;
+  background: #0d1427;
+  border: 1px solid #394665;
+}
+
+.post button {
+  margin-top: 10px;
+  background: #a34454;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  color: #aeb6d0;
+}
