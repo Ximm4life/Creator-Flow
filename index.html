@@ -7,12 +7,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
     <h1>Creator<span>Flow</span></h1>
     <p>Your free content creation toolkit.</p>
   </header>
 
   <main>
+
     <section class="hero">
       <h2>Create Better Content. Grow Faster.</h2>
       <p>Get content ideas, titles, captions, scripts, and plan your next posts.</p>
@@ -20,6 +22,7 @@
 
     <section class="panel">
       <h2>Content Generator</h2>
+
       <label for="tool">What do you want to create?</label>
       <select id="tool">
         <option value="ideas">Video ideas</option>
@@ -39,12 +42,15 @@
       </select>
 
       <button id="generate">Generate content</button>
-      <div id="result" class="result" aria-live="polite">Your results will appear here.</div>
+      <div id="result" class="result" aria-live="polite">
+        Your results will appear here.
+      </div>
       <button id="copy" class="secondary">Copy result</button>
     </section>
 
     <section class="panel">
       <h2>Content Planner</h2>
+
       <label for="post">Content idea</label>
       <input id="post" placeholder="What are you planning to post?">
 
@@ -54,23 +60,42 @@
       <button id="addPost">Add to planner</button>
       <div id="planner"></div>
     </section>
+
     <section class="panel">
-  <h2>Viral Hook Generator</h2>
+      <h2>Viral Hook Generator</h2>
 
-  <label for="hookTopic">What is your video about?</label>
-  <input id="hookTopic" placeholder="Example: gaming">
+      <label for="hookTopic">What is your video about?</label>
+      <input id="hookTopic" placeholder="Example: gaming">
 
-  <button id="generateHook">Generate Hooks</button>
+      <button id="generateHook">Generate Hooks</button>
 
-  <div id="hookResult" class="result">
-    Your hooks will appear here.
-  </div>
+      <div id="hookResult" class="result">
+        Your hooks will appear here.
+      </div>
 
-  <button id="copyHook" class="secondary">Copy Hooks</button>
-</section>
+      <button id="copyHook" class="secondary">Copy Hooks</button>
+    </section>
+
+    <section class="panel">
+      <h2>Thumbnail Idea Generator</h2>
+
+      <label for="thumbnailTopic">What is your video about?</label>
+      <input id="thumbnailTopic" placeholder="Example: gaming">
+
+      <button id="generateThumbnail">Generate Thumbnail Ideas</button>
+
+      <div id="thumbnailResult" class="result">
+        Your thumbnail ideas will appear here.
+      </div>
+
+      <button id="copyThumbnail" class="secondary">Copy Ideas</button>
+    </section>
+
   </main>
 
   <footer>CreatorFlow · Built for creators</footer>
+
   <script src="script.js"></script>
+
 </body>
 </html>
