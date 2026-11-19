@@ -194,4 +194,61 @@ $("copyThumbnail").addEventListener("click", async () => {
   }
 });
 
-renderPosts();
+renderPosts(); 
+function generateDescription() {
+  const topic = $("descriptionTopic").value.trim();
+  const platform = $("descriptionPlatform").value;
+  const result = $("descriptionResult");
+
+  if (!topic) {
+    result.textContent = "Please enter a video topic first.";
+    return;
+  }
+
+  let description = "";
+
+  if (platform === "YouTube") {
+    description = `Welcome to this video about ${topic}!
+
+In this video, we're exploring ${topic} and sharing useful information, tips, and ideas.
+
+If you enjoy the video, LIKE, SUBSCRIBE, and turn on notifications!
+
+What do you think about ${topic}? Let me know in the comments!
+
+#${topic.replace(/[^a-zA-Z0-9]/g, "")} #YouTube #CreatorFlow`;
+  }
+
+  if (platform === "TikTok") {
+    description = `Let's talk about ${topic}! 🔥
+
+Watch until the end and tell me what you think!
+
+Follow for more content!
+
+#${topic.replace(/[^a-zA-Z0-9]/g, "")} #TikTok #FYP`;
+  }
+
+  if (platform === "Instagram") {
+    description = `Here's something about ${topic} that you don't want to miss! 👀
+
+Share this with someone who would enjoy it!
+
+Follow for more content.
+
+#${topic.replace(/[^a-zA-Z0-9]/g, "")} #Instagram #ContentCreator`;
+  }
+
+  result.textContent = description;
+}
+
+$("generateDescription").addEventListener("click", generateDescription);
+
+$("copyDescription").addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText($("descriptionResult").textContent);
+    $("copyDescription").textContent = "Copied!";
+  } catch {
+    $("copyDescription").textContent = "Copy unavailable";
+  }
+});
