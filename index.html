@@ -3,10 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="qHf6ir703wQy2sm4Ln4_Q0HRvJXOMgfngCzduKn9Qmg" />
+
+  <meta name="google-site-verification" content="qHf6ir703wQy2sm4Ln4_Q0HRvJXOMgfngCzduKn9Qmg">
+
+  <meta name="description" content="CreatorFlow is a free content creation toolkit. Generate video ideas, YouTube titles, TikTok captions, scripts, hooks, and more.">
+
+  <meta name="theme-color" content="#101827">
+
   <title>CreatorFlow | Create Better Content</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header>
@@ -14,108 +22,384 @@
     <p>Your free content creation toolkit.</p>
   </header>
 
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#tools">Tools</a>
+    <a href="#about">About</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <main>
 
-    <section class="hero">
+    <section class="hero" id="home">
       <h2>Create Better Content. Grow Faster.</h2>
       <p>Get content ideas, titles, captions, scripts, and plan your next posts.</p>
     </section>
 
-    <section class="panel">
-      <h2>Content Generator</h2>
+    <div id="tools">
 
-      <label for="tool">What do you want to create?</label>
-      <select id="tool">
-        <option value="ideas">Video ideas</option>
-        <option value="titles">YouTube titles</option>
-        <option value="captions">TikTok captions</option>
-        <option value="scripts">Video scripts</option>
-      </select>
+      <section class="panel">
+        <h2>Content Generator</h2>
 
-      <label for="niche">Your content topic</label>
-      <input id="niche" placeholder="Example: gaming, fitness, cooking">
+        <label for="tool">What do you want to create?</label>
+        <select id="tool">
+          <option value="ideas">Video ideas</option>
+          <option value="titles">YouTube titles</option>
+          <option value="captions">TikTok captions</option>
+          <option value="scripts">Video scripts</option>
+        </select>
 
-      <label for="platform">Your platform</label>
-      <select id="platform">
-        <option>YouTube</option>
-        <option>TikTok</option>
-        <option>Instagram</option>
-      </select>
+        <label for="niche">Your content topic</label>
+        <input id="niche" placeholder="Example: gaming, fitness, cooking">
 
-      <button id="generate">Generate content</button>
-      <div id="result" class="result" aria-live="polite">
-        Your results will appear here.
-      </div>
-      <button id="copy" class="secondary">Copy result</button>
+        <label for="platform">Your platform</label>
+        <select id="platform">
+          <option>YouTube</option>
+          <option>TikTok</option>
+          <option>Instagram</option>
+        </select>
+
+        <button id="generate">Generate content</button>
+
+        <div id="result" class="result" aria-live="polite">
+          Your results will appear here.
+        </div>
+
+        <button id="copy" class="secondary">Copy result</button>
+      </section>
+
+      <section class="panel">
+        <h2>Content Planner</h2>
+
+        <label for="post">Content idea</label>
+        <input id="post" placeholder="What are you planning to post?">
+
+        <label for="postDate">Posting date</label>
+        <input id="postDate" type="date">
+
+        <button id="addPost">Add to planner</button>
+
+        <div id="planner"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Viral Hook Generator</h2>
+
+        <label for="hookTopic">What is your video about?</label>
+        <input id="hookTopic" placeholder="Example: gaming">
+
+        <button id="generateHook">Generate Hooks</button>
+
+        <div id="hookResult" class="result">
+          Your hooks will appear here.
+        </div>
+
+        <button id="copyHook" class="secondary">Copy Hooks</button>
+      </section>
+
+      <section class="panel">
+        <h2>Thumbnail Idea Generator</h2>
+
+        <label for="thumbnailTopic">What is your video about?</label>
+        <input id="thumbnailTopic" placeholder="Example: gaming">
+
+        <button id="generateThumbnail">Generate Thumbnail Ideas</button>
+
+        <div id="thumbnailResult" class="result">
+          Your thumbnail ideas will appear here.
+        </div>
+
+        <button id="copyThumbnail" class="secondary">Copy Ideas</button>
+      </section>
+
+      <section class="panel">
+        <h2>Video Description Generator</h2>
+
+        <label for="descriptionTopic">What is your video about?</label>
+        <input id="descriptionTopic" placeholder="Example: Minecraft survival">
+
+        <label for="descriptionPlatform">Choose your platform</label>
+        <select id="descriptionPlatform">
+          <option>YouTube</option>
+          <option>TikTok</option>
+          <option>Instagram</option>
+        </select>
+
+        <button id="generateDescription">Generate Description</button>
+
+        <div id="descriptionResult" class="result">
+          Your description will appear here.
+        </div>
+
+        <button id="copyDescription" class="secondary">Copy Description</button>
+      </section>
+
+    </div>
+
+    <!-- ABOUT SECTION -->
+
+    <section class="panel" id="about">
+      <h2>About CreatorFlow</h2>
+
+      <p>
+        CreatorFlow is a free content creation toolkit designed to help
+        creators plan, organize, and develop their content.
+      </p>
+
+      <p>
+        Whether you're starting your first channel or already creating
+        content, CreatorFlow gives you simple tools to help make the
+        creative process easier.
+      </p>
+
+      <p>
+        Our goal is to make content creation more accessible by bringing
+        useful creator tools together in one convenient place.
+      </p>
+
+      <h3>Our Mission</h3>
+
+      <p>
+        Help creators spend less time figuring out what to post and more
+        time creating content they enjoy.
+      </p>
     </section>
 
-    <section class="panel">
-      <h2>Content Planner</h2>
+    <!-- FAQ SECTION -->
 
-      <label for="post">Content idea</label>
-      <input id="post" placeholder="What are you planning to post?">
+    <section class="panel" id="faq">
+      <h2>Frequently Asked Questions</h2>
 
-      <label for="postDate">Posting date</label>
-      <input id="postDate" type="date">
+      <details>
+        <summary>Is CreatorFlow free?</summary>
+        <p>Yes. CreatorFlow is currently free to use.</p>
+      </details>
 
-      <button id="addPost">Add to planner</button>
-      <div id="planner"></div>
+      <details>
+        <summary>What can I use CreatorFlow for?</summary>
+        <p>
+          You can generate content ideas, video titles, captions,
+          scripts, hooks, thumbnail ideas, and video descriptions.
+          You can also organize upcoming posts with the Content Planner.
+        </p>
+      </details>
+
+      <details>
+        <summary>Which platforms does CreatorFlow support?</summary>
+        <p>
+          CreatorFlow currently includes tools for YouTube,
+          TikTok, and Instagram.
+        </p>
+      </details>
+
+      <details>
+        <summary>Do I need an account?</summary>
+        <p>
+          No account is currently required to access the website's tools.
+        </p>
+      </details>
+
+      <details>
+        <summary>Does CreatorFlow guarantee views or followers?</summary>
+        <p>
+          No. CreatorFlow provides creative tools and suggestions.
+          Content performance depends on many factors, and results
+          are never guaranteed.
+        </p>
+      </details>
+
+      <details>
+        <summary>How can I contact CreatorFlow?</summary>
+        <p>
+          You can contact us at
+          <a href="mailto:officialcreatorflow1@gmail.com">
+            officialcreatorflow1@gmail.com
+          </a>.
+        </p>
+      </details>
     </section>
 
-    <section class="panel">
-      <h2>Viral Hook Generator</h2>
+    <!-- CONTACT SECTION -->
 
-      <label for="hookTopic">What is your video about?</label>
-      <input id="hookTopic" placeholder="Example: gaming">
+    <section class="panel" id="contact">
+      <h2>Contact CreatorFlow</h2>
 
-      <button id="generateHook">Generate Hooks</button>
+      <p>
+        Have a question, suggestion, or need assistance?
+        We'd be happy to hear from you.
+      </p>
 
-      <div id="hookResult" class="result">
-        Your hooks will appear here.
-      </div>
+      <h3>Business & Support Email</h3>
 
-      <button id="copyHook" class="secondary">Copy Hooks</button>
+      <p>
+        <a href="mailto:officialcreatorflow1@gmail.com">
+          officialcreatorflow1@gmail.com
+        </a>
+      </p>
+
+      <p>
+        For general questions, technical issues, or business inquiries,
+        please reach out using our official email address.
+      </p>
+
+      <a class="contact-button"
+         href="mailto:officialcreatorflow1@gmail.com?subject=CreatorFlow%20Inquiry">
+        Email CreatorFlow
+      </a>
     </section>
 
-    <section class="panel">
-      <h2>Thumbnail Idea Generator</h2>
+    <!-- PRIVACY POLICY -->
 
-      <label for="thumbnailTopic">What is your video about?</label>
-      <input id="thumbnailTopic" placeholder="Example: gaming">
+    <section class="panel" id="privacy">
+      <h2>Privacy Policy</h2>
 
-      <button id="generateThumbnail">Generate Thumbnail Ideas</button>
+      <p><strong>Last updated: November 19, 2026</strong></p>
 
-      <div id="thumbnailResult" class="result">
-        Your thumbnail ideas will appear here.
-      </div>
+      <p>
+        CreatorFlow respects your privacy. This policy explains
+        how information may be handled when you visit our website.
+      </p>
 
-      <button id="copyThumbnail" class="secondary">Copy Ideas</button>
+      <h3>Information You Provide</h3>
+
+      <p>
+        Information entered into CreatorFlow's tools is used to
+        provide the requested features. Do not enter sensitive
+        personal information into the website.
+      </p>
+
+      <h3>Cookies and Local Storage</h3>
+
+      <p>
+        Your browser may store information associated with website
+        functionality. Browser storage and cookies can be managed
+        through your browser settings.
+      </p>
+
+      <h3>Third-Party Services</h3>
+
+      <p>
+        CreatorFlow is hosted using GitHub Pages. Third-party
+        services may process technical information when you visit
+        the website. Their own privacy policies apply.
+      </p>
+
+      <h3>Contact</h3>
+
+      <p>
+        Questions about this policy can be sent to
+        officialcreatorflow1@gmail.com.
+      </p>
     </section>
 
-   <section class="panel">
-      <h2>Video Description Generator</h2>
+    <!-- TERMS OF SERVICE -->
 
-      <label for="descriptionTopic">What is your video about?</label>
-      <input id="descriptionTopic" placeholder="Example: Minecraft survival">
+    <section class="panel" id="terms">
+      <h2>Terms of Service</h2>
 
-      <label for="descriptionPlatform">Choose your platform</label>
-      <select id="descriptionPlatform">
-        <option>YouTube</option>
-        <option>TikTok</option>
-        <option>Instagram</option>
-      </select>
+      <p><strong>Last updated: November 19, 2026</strong></p>
 
-      <button id="generateDescription">Generate Description</button>
+      <h3>Using CreatorFlow</h3>
 
-      <div id="descriptionResult" class="result">
-        Your description will appear here.
-      </div>
+      <p>
+        By using CreatorFlow, you agree to use the website responsibly
+        and comply with applicable laws.
+      </p>
 
-      <button id="copyDescription" class="secondary">Copy Description</button>
+      <h3>Free Tools</h3>
+
+      <p>
+        CreatorFlow currently provides its content creation tools
+        free of charge. Features may be changed, updated, or
+        discontinued.
+      </p>
+
+      <h3>Content and Suggestions</h3>
+
+      <p>
+        Content generated by CreatorFlow is provided as creative
+        assistance. You are responsible for reviewing and deciding
+        how to use generated suggestions.
+      </p>
+
+      <h3>No Guarantees</h3>
+
+      <p>
+        CreatorFlow does not guarantee audience growth, views,
+        engagement, income, or other results.
+      </p>
+
+      <h3>Website Availability</h3>
+
+      <p>
+        We aim to keep CreatorFlow available, but uninterrupted
+        access is not guaranteed.
+      </p>
+
+      <h3>Contact</h3>
+
+      <p>
+        Questions about these terms can be sent to
+        officialcreatorflow1@gmail.com.
+      </p>
     </section>
+
+    <!-- DISCLAIMER -->
+
+    <section class="panel" id="disclaimer">
+      <h2>Disclaimer</h2>
+
+      <p>
+        CreatorFlow is an independent content creation toolkit.
+        It is not affiliated with, endorsed by, or officially
+        connected to YouTube, TikTok, or Instagram.
+      </p>
+
+      <p>
+        Platform names and trademarks belong to their respective
+        owners.
+      </p>
+
+      <p>
+        Generated suggestions are not guarantees of content
+        performance or financial success.
+      </p>
+    </section>
+
   </main>
 
-  <footer>CreatorFlow · Built for creators</footer>
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
+    <h2>Creator<span>Flow</span></h2>
+
+    <p>Your free content creation toolkit.</p>
+
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#tools">Tools</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#terms">Terms of Service</a>
+      <a href="#disclaimer">Disclaimer</a>
+    </div>
+
+    <p>
+      Contact:
+      <a href="mailto:officialcreatorflow1@gmail.com">
+        officialcreatorflow1@gmail.com
+      </a>
+    </p>
+
+    <p class="copyright">
+      © 2026 CreatorFlow. All rights reserved.
+    </p>
+
+  </footer>
 
   <script src="script.js"></script>
 
